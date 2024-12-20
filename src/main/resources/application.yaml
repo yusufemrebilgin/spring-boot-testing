@@ -1,0 +1,10 @@
+spring:
+  application:
+    name: unit-and-integration
+  docker:
+    compose:
+      enabled: true
+      file: docker-compose.yaml
+  jpa:
+    hibernate:
+      ddl-auto: update

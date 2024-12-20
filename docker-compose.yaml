@@ -1,0 +1,8 @@
+services:
+  database:
+    image: mysql
+    environment:
+      MYSQL_DATABASE: comments
+      MYSQL_ROOT_PASSWORD: root
+    ports:
+      - '3306'

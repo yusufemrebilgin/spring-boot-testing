@@ -2,6 +2,10 @@ package com.example.testing.comment;
 
 public class CommentTestDataFactory {
 
+    public static Comment comment(String name) {
+        return comment(null, name);
+    }
+
     public static Comment comment(Long id, String name) {
         return comment(id, name, "email@example.com", "default-comment-body");
     }
@@ -12,6 +16,10 @@ public class CommentTestDataFactory {
 
     public static CommentRequest request(Comment c) {
         return new CommentRequest(c.getName(), c.getEmail(), c.getBody());
+    }
+
+    public static CommentRequest request(String name) {
+        return new CommentRequest(name, "email@example.com", "default-comment-request-body");
     }
 
     public static CommentResponse response(Comment c) {
